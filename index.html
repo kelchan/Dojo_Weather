@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Montserrat&family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <title>DojoWeather</title>
+    </head>
+
+    <body>
+        <!-- NAVBAR  -->
+        <div id="navbar">
+            <h1>DojoWeather</h1>
+            <ul id="cities">
+                <li onclick="city(this)">Burbank</li>
+                <li onclick="city(this)">Chicago</li>
+                <li onclick="city(this)">Dallas</li>
+            </ul>
+        </div>
+
+        <!-- BODY  -->
+        <div id="body">
+
+            <!-- CITY  -->
+            <div id="city">
+                <h2>San Jose</h2>
+                <label for="show-temp">
+                    <p>show temperature in</p>
+                    <select name="show-temp" id="show-temp" onchange="temp(this)">
+                        <option value="C"><span>&#176;</span> C</option>
+                        <option value="F"><span>&#176;</span> F</option>
+                    </select>
+                </label>
+            </div>
+
+            <!-- WEATHER FORCAST -->
+            <div id="weather">
+                <div class="day">
+                    <h3>Today</h3>
+                    <img src="./assets/some_rain.png" alt="rain">
+                    <p>some rain</p>
+                    <div id="temp">
+                        <p class="hot"><span id="change">24</span> <span>&#176;</span></p>
+                        <p class="cold"><span id="change">18</span> <span>&#176;</span></p>
+                    </div>
+                </div>
+                <div class="day">
+                    <h3>Tomorrow</h3>
+                    <img src="./assets/some_sun.png" alt="rain">
+                    <p>some sun</p>
+                    <div id="temp">
+                        <p class="hot"><span id="change">27</span> <span>&#176;</span></p>
+                        <p class="cold"><span id="change">19</span> <span>&#176;</span></p>
+                    </div>
+                </div>
+                <div class="day">
+                    <h3>Friday</h3>
+                    <img src="./assets/some_clouds.png" alt="rain">
+                    <p>some clouds</p>
+                    <div id="temp">
+                        <p class="hot"><span id="change">21</span> <span>&#176;</span></p>
+                        <p class="cold"><span id="change">16</span> <span>&#176;</span></p>
+                    </div>
+                </div>
+                <div class="day">
+                    <h3>Saturday</h3>
+                    <img src="./assets/some_sun.png" alt="rain">
+                    <p>some sun</p>
+                    <div id="temp">
+                        <p class="hot"><span id="change">26</span> <span>&#176;</span></p>
+                        <p class="cold"><span id="change">21</span> <span>&#176;</span></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+            <!-- COOKIE BOX  -->
+            <div id="cookie-box">
+                <img src="./assets/cookie.png" alt="cookie">
+                <div>
+                    <h4>Stop! Cookie time</h4>
+                    <p>We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media features and to analyse our traffic. <a href="#">Read more...</a></p>
+                </div>
+                <button onclick="remove('#cookie-box')">I Accept</button>
+            </div>
+
+
+
+
+
+        <script src="script.js"></script>
+    </body>
+</html>
